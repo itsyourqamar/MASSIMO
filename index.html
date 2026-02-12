@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Massimo Salon & Academy | Indore's Premium Destination</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Fluid Typography scaling based on viewport width */
+        --h1: clamp(2.25rem, 10vw, 8rem);
+        --h2: clamp(1.75rem, 6vw, 4.5rem);
+        --h3: clamp(1.25rem, 3vw, 2rem);
+        --body-text: clamp(0.875rem, 1.5vw, 1.125rem);
+        --xs-text: clamp(0.65rem, 1vw, 0.875rem);
+        --section-spacing: clamp(4rem, 12vw, 8rem);
+        --side-padding: clamp(1rem, 5vw, 2.5rem);
+      }
+
+      * {
+        -webkit-tap-highlight-color: transparent;
+        box-sizing: border-box;
+      }
+      
+      html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: #000;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .font-serif {
+        font-family: 'Playfair Display', serif;
+      }
+      .text-gold {
+        color: #d4af37;
+      }
+      .bg-gold {
+        background-color: #d4af37;
+      }
+      .border-gold {
+        border-color: #d4af37;
+      }
+
+      /* Apply fluid typography */
+      h1 { font-size: var(--h1) !important; line-height: 1.1; }
+      h2 { font-size: var(--h2) !important; line-height: 1.2; }
+      h3 { font-size: var(--h3) !important; }
+      p { font-size: var(--body-text) !important; }
+      
+      /* Animation Keyframes */
+      @keyframes fadeSlideUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes zoomOut {
+        from { transform: scale(1.05); }
+        to { transform: scale(1); }
+      }
+      
+      @keyframes glowPulse {
+        0% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.2); }
+        50% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); }
+        100% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.2); }
+      }
+      
+      @keyframes slowPulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+        100% { transform: scale(1); }
+      }
+
+      .animate-fade-up {
+        animation: fadeSlideUp 0.8s ease-out forwards;
+      }
+      
+      .animate-zoom-out {
+        animation: zoomOut 2s ease-out forwards;
+      }
+      
+      .glow-pulse {
+        animation: glowPulse 4s infinite ease-in-out;
+      }
+      
+      .slow-pulse {
+        animation: slowPulse 3s infinite ease-in-out;
+      }
+
+      /* Observer styles */
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d4af37;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Fix potential overflow on images/containers */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+</head>
+  <body ontouchstart="">
+    <div id="root"></div>
+  </body>
+</html>
